@@ -1,0 +1,31 @@
+{
+  "name": "github-vue",
+  "version": "0.0.1",
+  "description": "\"A Vue.js component for displaying a GitHub User's information and statistics\"",
+  "main": "/dist/github-vue.js",
+  "scripts": {
+    "build": "rimraf ./dist && webpack --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammcoe/github-vue.git"
+  },
+  "keywords": [
+    "vue",
+    "github",
+    "widget",
+    "component"
+  ],
+  "author": "Samuel Coe",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sammcoe/github-vue/issues"
+  },
+  "homepage": "https://github.com/sammcoe/github-vue#readme",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bulma": "^0.6.2",
+    "rollup-plugin-vue": "^3.0.0",
+    "vue-template-compiler": "^2.5.13"
+  }
+}
