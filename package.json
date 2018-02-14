@@ -24,7 +24,9 @@
   "homepage": "https://github.com/sammcoe/github-vue#readme",
   "dependencies": {
     "axios": "^0.17.1",
-    "bulma": "^0.6.2",
+    "bulma": "^0.6.2"
+  },
+  "devDependencies": {
     "rollup-plugin-vue": "^3.0.0",
     "vue-template-compiler": "^2.5.13"
   }
