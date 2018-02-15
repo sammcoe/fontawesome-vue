@@ -301,10 +301,12 @@ export default {
 
 .vcard {
   max-width: 375px;
+  min-width: 350px;
 }
 
 .hcard {
   max-width: 650px;
+  min-width: 600px
 }
 
 .no-pad {
