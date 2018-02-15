@@ -27,7 +27,17 @@
     "bulma": "^0.6.2"
   },
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "css-loader": "^0.28.9",
     "rollup-plugin-vue": "^3.0.0",
-    "vue-template-compiler": "^2.5.13"
+    "sass-loader": "^6.0.6",
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "vue": "^2.5.13",
+    "vue-loader": "^14.1.1",
+    "vue-template-compiler": "^2.5.13",
+    "webpack": "^3.11.0",
+    "webpack-merge": "^4.1.1"
   }
 }

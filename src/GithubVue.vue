@@ -116,7 +116,7 @@
 
 <script>
 import axios from 'axios';
-import "./node_modules/bulma/bulma.sass"
+// import "../node_modules/bulma/bulma.sass"
 
 export default {
   props: {
@@ -161,16 +161,12 @@ export default {
     userInfo: {}
   }),
   computed: {
-    verticalCard() {
-      return {
-        'is-vertical': this.vertical
-      }
-    },
-    centerName() {
-      return {
-        'center-text': !this.avatar
-      }
-    }
+    verticalCard: () => ({
+      'is-vertical': this.vertical
+    }),
+    centerName: () => ({
+      'center-text': !this.avatar
+    })
   },
   created() {
     let userQuery = `query {
@@ -239,7 +235,7 @@ export default {
         console.log(JSON.stringify(this.userInfo));
       } else throw new Error(response.data.error)
     }).catch((e) => {
-      console.info(e);
+      console.log(e);
     });
   },
   methods: {

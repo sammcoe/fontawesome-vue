@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
+const UglifyJs = require('uglifyjs-webpack-plugin');
 const path = require('path');
 
 var commonConfig = {
@@ -10,13 +11,20 @@ var commonConfig = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: __dirname,
         exclude: /node_modules/
       },
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.sass$/,
+        include: [
+          path.resolve(__dirname, 'node_modules')
+        ],
+        loader: 'sass-loader'
       },
       {
         test: /\.css$/,
@@ -25,12 +33,13 @@ var commonConfig = {
     ]
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin( {
-      minimize : true,
+    new UglifyJs( {
       sourceMap : false,
-      mangle: true,
-      compress: {
-        warnings: false
+      uglifyOptions: {
+        mangle: true,
+        compress: {
+          warnings: false
+        }
       }
     })
   ],
