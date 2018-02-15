@@ -1,6 +1,6 @@
 {
   "name": "github-vue",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "\"A Vue.js component for displaying a GitHub User's information and statistics\"",
   "main": "/dist/github-vue.js",
   "scripts": {
