@@ -11,12 +11,12 @@ Styled using Bulma, this provides a lightweight, simple component for quickly ad
 Placing the component into a Vue application is as simple as importing it:
 `import GithubVue from 'github-vue'`
 and adding the tag:
-`<github-card/>`
+`<github-vue/>`
 
 ## Options
 The Gihub Vue component currently supports several options, that can bee added as attributes to the component tag.
 For Example:
-`<github-card
+`<github-vue
   :token="token"
   vertical
   avatar
