@@ -1,48 +1,52 @@
-# github-vue
-This is a Vue component for displaying a GitHub user's info and statistics in a Vue application.
-Styled using Bulma, this provides a lightweight, simple component for quickly adding GitHub user information to a website.
+# fontawesome-vue
+This is a Vue plugin to make rendering Font Awesome 5 SVG Icons simple in Vue applications.
 
-![Primary Screenshot](docs/component-full.png)
+**fontawesome-vue** is SSR friendly and works easily as a plugin component for Nuxt applications.
 
 ## Installation
-`npm install github-vue`
+`npm install fontawesome-vue`
 
 ## Usage
 Placing the component into a Vue application is as simple as importing it:
-`import GithubVue from 'github-vue'`
+`import fa from 'fontawesome-vue'`
 and adding the tag:
-`<github-vue/>`
+`<fa prefix="fab" icon="faTwitter"/>`
 
-## Options
-The Gihub Vue component currently supports several options, that can bee added as attributes to the component tag.
-For Example:
-`<github-vue
-  :token="token"
-  vertical
-  avatar
-  hireable
-  company
-  email
-  bio/>`
-  
-### token
-**token** is the only **mandatory** attribute, and must be passed a GitHub personal access token for the component to retrieve the necessary user data.  It is recommended that this token be used as an environment variable or stored in a configuration file within your project and that the configuration file is added to your `.gitignore` to avoid accidentally publishing it.  Instructions for generating a token can be found [here](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/).
+### prefix
+Font Awesome 5 has seperated the icons into distinct icon packs, they are:
+#### Font Awesome Solid - fas
+#### Font Awesome Brands - fab
+#### Font Awesome Regular - far
 
-### vertical
-**vertical** does exactly what it sounds like-- it enables the component vertical mode.
-![Vertical Screenshot](docs/component-vert.png)
+### icon
+The icon attribute simply takes the name of the icon you want to use, as it appears in the Font Awesome libarary-- with one exception.
+Instead of kebab case, use camel case.  For example:
+`faTwitter` instead of `fa-twitter`
 
-### avatar
-**avatar** will display the GitHub user's avatar-- omitting this value will hide it.
+## Nuxt
+This package was developed specifically with Nuxt in mind.  Setup in a Nuxt project as a plugin is quick and straightforward.
 
-### hireable
-**hireable** will display the GitHub user's hireable status-- omitting this value will hide it.
+### 1. Plugin File
+Create a file in `~/plugins` called `fontawesome-vue.js` and add these lines of code:
+```
+import Vue from 'vue';
+import fa from 'fontawesome-vue';
 
-### company
-**company** will display the GitHub user's company-- omitting this value will hide it.
+Vue.use(fa);
+```
 
-### email
-**email** will display the GitHub user's email-- omitting this value will hide it.
+### 2. Nuxt Config
+Add the following `vendor` and `plugins` pieces to your `nuxt.config.js` files:
+```
+module.exports = {
+  ...
+  build: {
+    ...
+    vendor: ['fontawesome-vue']
+  },
+  plugins: ['~/plugins/fontawesome-vue']
+  ...
+}
+```
 
-### bio
-**bio** will display the GitHub user's bio-- omitting this value will hide it.
+You will now be able to use the `fa` component throughout your application.

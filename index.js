@@ -1,1 +1,1 @@
-module.exports = require('./dist/github-vue');
+module.exports = require('./dist/fontawesome-vue');

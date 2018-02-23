@@ -1,37 +1,38 @@
 {
-  "name": "github-vue",
-  "version": "0.0.6",
-  "description": "\"A Vue.js component for displaying a GitHub User's information and statistics\"",
-  "main": "/dist/github-vue.js",
+  "name": "fontawesome-vue",
+  "version": "0.0.1",
+  "description": "\"A Vue.js plugin to make Font Awesome SVG icon rendering easy.\"",
+  "main": "/dist/fontawesome-vue.js",
   "scripts": {
     "build": "rimraf ./dist && webpack --config ./webpack.config.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sammcoe/github-vue.git"
+    "url": "git+https://github.com/sammcoe/fontawesome-vue.git"
   },
   "keywords": [
     "vue",
-    "github",
+    "fontawesome",
     "widget",
     "component"
   ],
   "author": "Samuel Coe",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/sammcoe/github-vue/issues"
+    "url": "https://github.com/sammcoe/fontawesome-vue/issues"
   },
-  "homepage": "https://github.com/sammcoe/github-vue#readme",
+  "homepage": "https://github.com/sammcoe/fontawesome-vue#readme",
   "dependencies": {
-    "axios": "^0.17.1",
-    "bulma": "^0.6.2"
+    "@fortawesome/fontawesome": "^1.1.3",
+    "@fortawesome/fontawesome-free-brands": "^5.0.6",
+    "@fortawesome/fontawesome-free-regular": "^5.0.6",
+    "@fortawesome/fontawesome-free-solid": "^5.0.6"
   },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "css-loader": "^0.28.9",
-    "rollup-plugin-vue": "^3.0.0",
     "sass-loader": "^6.0.6",
     "uglifyjs-webpack-plugin": "^1.1.8",
     "vue": "^2.5.13",

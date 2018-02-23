@@ -28,6 +28,9 @@ var commonConfig = {
       },
       {
         test: /\.css$/,
+        include: [
+          path.resolve(__dirname, 'node_modules')
+        ],
         loader: 'style!less!css'
       }
     ]
@@ -42,10 +45,7 @@ var commonConfig = {
         }
       }
     })
-  ],
-  externals: {
-    axios: 'axios'
-  }
+  ]
 };
 
 module.exports = [
@@ -53,19 +53,19 @@ module.exports = [
   merge(commonConfig, {
     entry: path.resolve(__dirname + '/src/plugin.js'),
     output: {
-      filename: 'github-vue.min.js',
+      filename: 'fontawesome-vue.min.js',
       libraryTarget: 'window',
-      library: 'GithubVue'
+      library: 'faVue'
     }
   }),
   
   // For Node
   merge(commonConfig, {
-    entry: path.resolve(__dirname + '/src/GithubVue.vue'),
+    entry: path.resolve(__dirname + '/src/plugin.js'),
     output: {
-      filename: 'github-vue.js',
+      filename: 'fontawesome-vue.js',
       libraryTarget: 'umd',
-      library: 'github-vue',
+      library: 'fontawesome-vue',
       umdNamedDefine: true
     }
   })
