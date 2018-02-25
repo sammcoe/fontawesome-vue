@@ -1,3 +1,5 @@
+## Note: As of right now, the dynamic import isn't playing well with Nuxt and/or Webpack.  This results in each entire icon pack being included in the bundle isntead of individual icons.  I'm not sure right now if I should or how I can solve this-- check out the [Nuxt Fontawesome module](https://github.com/vaso2/nuxt-fontawesome), which works well with a little extra setup.
+
 # fontawesome-vue
 This is a Vue plugin to make rendering Font Awesome 5 SVG Icons simple in Vue applications.
 
