@@ -23,13 +23,19 @@ const fa = {
           },
           domProps: {
             innerHTML: (() => {
-              if (this.prefix === 'fab') {
-                return fontawesome.icon(require(`@fortawesome/fontawesome-free-brands/${this.icon}`)).html[0];
-              } else if (this.prefix === 'fas') {
-                return fontawesome.icon(require(`@fortawesome/fontawesome-free-solid/${this.icon}`)).html[0];
-              } else if (this.prefix === 'far') {
-                return fontawesome.icon(require(`@fortawesome/fontawesome-free-regular/${this.icon}`)).html[0];
-              } else return null;
+              const types = {
+                fab: 'brands',
+                fas: 'solid',
+                far: 'regular',
+              };
+              
+              if (typeof types[this.prefix] !== 'undefined'){
+                return fontawesome.icon(
+                        require(`@fortawesome/fontawesome-free-brands/${this.icon}`)
+                       ).html[0];
+              }
+              
+              return null;
             })()
           }
         });
